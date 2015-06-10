@@ -29,7 +29,9 @@ public class ChartResources {
     "chart/chart-item.js",
     "chart/bar-chart.js",
     "chart/stream-chart.js",
-    "chart/pie-chart.js"
+    "chart/pie-chart.js",
+    "chart/gauge-chart.js",
+    "chart/clock-chart.js"
   };
   private static final ResourceLoader RESOURCE_LOADER = new ResourceLoader() {
     public InputStream getResourceAsStream( String resourceName ) throws IOException {
@@ -45,7 +47,7 @@ public class ChartResources {
       // TODO register resources only once
       d3Location = register( resourceManager,
                              "lib/d3.v3.min.js",
-                             RESOURCE_LOADER.getResourceAsStream( "resources/d3.v3.min.js" ) );
+                             RESOURCE_LOADER.getResourceAsStream( "resources/d3.min.js" ) );
       chartLocation = register( resourceManager,
                                 "d3chart/d3chart.js",
                                 concatResources( RESOURCE_LOADER, CHART_JS_RESOURCES ) );
