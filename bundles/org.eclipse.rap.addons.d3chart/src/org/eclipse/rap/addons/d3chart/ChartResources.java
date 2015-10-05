@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2013 EclipseSource and others.
+ * Copyright (c) 2013, 2015 EclipseSource and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -31,8 +31,10 @@ public class ChartResources {
     "chart/stream-chart.js",
     "chart/pie-chart.js",
     "chart/gauge-chart.js",
-    "chart/clock-chart.js"
-  };
+    "chart/clock-chart.js",
+    "chart/grouped-bar-chart.js" 
+    };
+  
   private static final ResourceLoader RESOURCE_LOADER = new ResourceLoader() {
     public InputStream getResourceAsStream( String resourceName ) throws IOException {
       return ChartResources.class.getClassLoader().getResourceAsStream( resourceName );
